@@ -9,6 +9,7 @@ General Structures :
 5. Exam Result Page
 
 Notes :
-1. This website will use CodeIgniter 3.1.11 as it frameworks
-2. This website use Indonesian Language in general
-3. Feel free to contribute to this repository
+1. This website use CodeIgniter 3.1.11 as it PHP frameworks
+2. This website use Bootstrap as it main CSS and JS frameworks.
+3. This website use Indonesian Language in general
+4. Feel free to contribute to this repository
