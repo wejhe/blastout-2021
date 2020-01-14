@@ -1,5 +1,5 @@
 # blastout-2021
-A Website of an exam simulation event that handles participant registration and provides a secure online exam
+A Website of an exam simulation event in Indonesia that handles participant registration and provides a secure online exam
 
 General Structures :
 1. Landing Page
@@ -9,4 +9,6 @@ General Structures :
 5. Exam Result Page
 
 Notes :
-This website will use CodeIgniter 3.1.11 as it frameworks
+1. This website will use CodeIgniter 3.1.11 as it frameworks
+2. This website use Indonesian Language in general
+3. Feel free to contribute to this repository
