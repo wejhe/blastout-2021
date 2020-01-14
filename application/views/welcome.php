@@ -8,22 +8,6 @@ require_once('intern.php');
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("a").on('click', function(event) {
-				if (this.hash !== "") {
-      				event.preventDefault();
-					var hash = this.hash;
-					$('html, body').animate({
-        				scrollTop: $(hash).offset().top
-						}, 800, function(){
-   						window.location.hash = hash;
-					});
-				}
-  			});
-		});
-	</script>
 	<title>Blast Out 2021 | Feel The Real</title>
 </head>
 <body>
@@ -42,6 +26,21 @@ require_once('intern.php');
 					<a class="nav-item nav-link" href="#tim">Tim</a>
 					<a class="nav-item nav-link" href="#testimoni">Testimoni</a>
 					<a class="nav-item nav-link" href="#galeri">Galeri</a>
+					<script>
+						$(document).ready(function(){
+							$("a").on('click', function(event) {
+								if (this.hash !== "") {
+									event.preventDefault();
+									var hash = this.hash;
+									$('html, body').animate({
+										scrollTop: $(hash).offset().top
+										}, 1000, function(){
+										window.location.hash = hash;
+									});
+								}
+							});
+						});
+					</script>
 				</div>
 			</div>
 			<form class="form-inline">
@@ -69,12 +68,12 @@ require_once('intern.php');
     							<input type="text" class="form-control" id="semangat" aria-describedby="spirit">
     							<small id="spirit" class="form-text text-muted">Contoh : Bismillah 2021 Lolos UGM! - Namamu/Asal Sekolah</small>
   							</div>
-							<button type="submit" class="btn btn-outline-light">Submit</button>
+							<button type="submit" class="btn btn-outline-light">Kirim</button>
 						</form>
 					</div>
 					<div class="col">
 						<p align="right">
-							<img class="rounded" src="<?php echo base_url('intern/img/ketua.jpg')?>" width="500" height="400" alt="brand">
+							<img class="rounded" src="<?php echo base_url('intern/img/logo.png')?>" width="500" height="500" alt="brand">
 						</p>
 					</div>
 				</div>
@@ -84,7 +83,7 @@ require_once('intern.php');
 
 	<div class="jumbotron" id="sambutan">
 		<div class="container">
-			<br><br>
+			<br><br><br><br><br>
 			<div class="row">
 				<div class="col">
 					<img class="rounded" src="<?php echo base_url('intern/img/ketua.jpg')?>" width="500" height="400" alt="brand">
@@ -97,42 +96,186 @@ require_once('intern.php');
 					<p align="right"><strong>Yoel Adisatya - Teknik Geomatika 2018</strong></p>
 				</div>
  			</div>
+			<br><br><br><br><br>
 		</div>
 	</div>
 
-	<!--<div class="container">
+	<div class="container" id="keunggulan">
+		<br><br><br><br><br>
+		<h4 align="center"><b>Keunggulan Blast Out 2021</b></h4>
+		<br><br>
 		<div class="card-deck">
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="<?php echo base_url('intern/img/piala.jpg')?>" class="card-img-top" alt="piala">
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				</div>
-				<div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
+					<h5 align="center" class="card-title"><b>Ranking Nasional</b></h5>
+					<p align="justify" class="card-text">Peserta dapat mengetahui posisi nilainya dibandingkan dengan peserta Try Out lain dari hampir seluruh daerah di Indonesia.</p>
 				</div>
 			</div>
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="<?php echo base_url('intern/img/pulpen.jpg')?>" class="card-img-top" alt="pulpen">
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-				</div>
-				<div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
+					<h5 align="center" class="card-title"><b>Feel The Real</b></h5>
+					<p align="justify" class="card-text">Peserta akan merasakan suasana ujian layaknya saat UTBK, sehingga akan lebih siap dalam menghadapi UTBK yang sebenarnya.</p>
 				</div>
 			</div>
 			<div class="card">
-				<img src="..." class="card-img-top" alt="...">
+				<img src="<?php echo base_url('intern/img/komputer.jpg')?>" class="card-img-top" alt="komputer">
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<h5 align="center" class="card-title"><b>Sistem Ujian Online</b></h5>
+					<p align="justify" class="card-text">Peserta akan mengerjakan soal-soal Try Out secara online dengan menggunakan komputer, layaknya UTBK yang sebenarnya.</p>
 				</div>
-				<div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
+			</div>
+			<div class="card">
+				<img src="<?php echo base_url('intern/img/gedung.jpg')?>" class="card-img-top" alt="gedung">
+				<div class="card-body">
+					<h5 align="center" class="card-title"><b>Gadjah Mada Fair</b></h5>
+					<p align="justify" class="card-text">Peserta dapat mengikuti Gadjah Mada Fair, sebuah acara yang menampilkan stand seluruh fakultas yang ada di UGM.</p>
 				</div>
 			</div>
 		</div>
-	</div>-->
+		<br><br><br><br><br>
+	</div>
+
+	<div class="jumbotron" id="tim">
+		<div class="container">
+			<br><br><br>
+			<h4 align="center"><b>Panitia Blast Out 2021</b></h4>
+			<br><br>
+			<div class="card-deck">
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictsekre.jpg')?>" class="card-img-top" alt="sekretaris">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Sekretaris</b></h5>
+						<p align="center" class="card-text">Francisca O M</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictketua.jpg')?>" class="card-img-top" alt="ketua">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Ketua Panitia</b></h5>
+						<p align="center" class="card-text">Yoel Adisatya</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictwakil.jpg')?>" class="card-img-top" alt="wakil">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Wakil Ketua</b></h5>
+						<p align="center" class="card-text">Miraq</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictbendahara.jpg')?>" class="card-img-top" alt="bendahara">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Bendahara</b></h5>
+						<p align="center" class="card-text">Tetria Y M</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card-deck">
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictacara.jpg')?>" class="card-img-top" alt="acara">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Acara</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Wahyu dan Laras</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictit.jpg')?>" class="card-img-top" alt="it">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi IT</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Bagus Satrio Nugroho</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictticketing.jpg')?>" class="card-img-top" alt="ticketing">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Ticketing</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Argha H D</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card-deck">
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictperkap.jpg')?>" class="card-img-top" alt="perkap">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Perkap</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Abyan Nadzir I</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictdanus.jpg')?>" class="card-img-top" alt="sponsorship">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Sponsorship</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Hesti Sekar</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/picthumpub.jpg')?>" class="card-img-top" alt="humpub">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Humas dan Publikasi</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Lanny R K</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card-deck">
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictpengawas.jpg')?>" class="card-img-top" alt="pengawas">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Pengawas</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Risky H</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictkeamanan.jpg')?>" class="card-img-top" alt="keamanan">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Keamanan</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Anargha N</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictksk.jpg')?>" class="card-img-top" alt="ksk">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi KSK</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Febrini Malau</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card-deck">
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictddd.jpg')?>" class="card-img-top" alt="ddd">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi DDD</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Puspita Nur I</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictbriefing.jpg')?>" class="card-img-top" alt="briefing">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Briefing</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Anwar B P</p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="<?php echo base_url('intern/img/pictkonsumsi.jpg')?>" class="card-img-top" alt="konsum">
+					<div class="card-body">
+						<h5 align="center" class="card-title"><b>Divisi Konsumsi</b></h5>
+						<p align="center" class="card-text">Koordinator :<br>Intan Afrilia S</p>
+					</div>
+				</div>
+			</div>
+			<br><br><br><br><br>
+		</div>
+	</div>
+
+	<div class="container" id="testimoni">
+		<br><br><br><br><br>
+		<h4 align="center"><b>Testimoni Blast Out 2020</b></h4>
+		
+	</div>
 </body>
 </html>
